@@ -17,9 +17,9 @@ class DBClient {
     this.client.connect()
       .then(() => {
         this.db = this.client.db(database);
-        console.log("Successfully connected to MongoDB");
+        console.log('Successfully connected to MongoDB');
       })
-      .catch((err) => console.error("MongoDB connection failed", err));
+      .catch((err) => console.error('MongoDB connection failed', err));
 
     // Flag to track if the connection is successful
     this.isConnected = false;
@@ -59,4 +59,3 @@ class DBClient {
 // Export an instance of DBClient
 const dbClient = new DBClient();
 module.exports = dbClient;
-
